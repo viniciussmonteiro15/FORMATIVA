@@ -78,7 +78,6 @@ app.post('/produtos', async (req, res) => {
     }
 });
 
-
 app.put('/produtos/:id', async (req, res) => {
     try {
         const { id } = req.params;
