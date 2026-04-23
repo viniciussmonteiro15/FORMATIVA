@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const pool = require('./config/database'); 
 
+app.use(express.json())
+
 const queryAsync = (sql, values = []) => {
     return new Promise((resolve, reject) => {
         pool.query(sql, values, (err, results) => {
